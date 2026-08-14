@@ -6,7 +6,7 @@ export const ORDER_STATUS_OPTIONS = [
   { value: "refunded", label: "已退款", tone: "danger" as const },
 ];
 
-const STATUS_SET = new Set(ORDER_STATUS_OPTIONS.map((s) => s.value));
+const STATUS_SET = new Set<string>(ORDER_STATUS_OPTIONS.map((s) => s.value));
 
 export function isOrderStatus(value: string) {
   return STATUS_SET.has(value);

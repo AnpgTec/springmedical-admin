@@ -11,8 +11,8 @@ export const LEAD_SOURCE_OPTIONS = [
   { value: "other", label: "其他" },
 ] as const;
 
-const STATUS_SET = new Set(LEAD_STATUS_OPTIONS.map((s) => s.value));
-const SOURCE_SET = new Set(LEAD_SOURCE_OPTIONS.map((s) => s.value));
+const STATUS_SET = new Set<string>(LEAD_STATUS_OPTIONS.map((s) => s.value));
+const SOURCE_SET = new Set<string>(LEAD_SOURCE_OPTIONS.map((s) => s.value));
 
 export function isLeadStatus(value: string) {
   return STATUS_SET.has(value);
